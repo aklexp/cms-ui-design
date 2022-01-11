@@ -1,3 +1,3 @@
 # cms-ui-design
 
-Clinic Management System
+Clinic Management System Project
