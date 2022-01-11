@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pharmacist Home</title>
+
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- CSS stylesheet -->
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        #sidebar {
+            height: 100%;
+            text-align: center;
+            color: black;
+            padding: 15px;
+        }
+
+        .table_search {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h-100 takes the full height of the body-->
+    <div class="container-fluid h-100">
+
+        <!-- h-100 takes the full height
+				of the container-->
+        <div class="row h-100">
+            <div class="col-2 bg-light" id="sidebar">
+                <h4>CMS</h4>
+
+                <!-- Navigation links in sidebar-->
+                <a href="#" class="nav link list-group-item">Home</a><br>
+                <a href="#" class="nav-link list-group-item">Add Medicine</a><br>
+                <a href="#" class="nav-link list-group-item">Medicine Details</a><br>
+                <a href="#" class="nav-link list-group-item">Add Staff</a><br>
+                <a href="#" class="nav link list-group-item">Staff Details</a><br>
+                <br />
+            </div>
+            <div class="col-10" style="padding: 0;">
+
+                <!-- Top navbar -->
+                <nav class="navbar navbar-expand-lg
+								navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user me-2"></i>Admin
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Contains the main content of the webpage-->
+                <div class="col" style="padding: 50px;">
+                    <h3 style="text-align: left;">Add Medicine</h3><br>
+                    <div class="table_search">Search <input type="text" id="presc_search"></div>
+                    <br>
+
+                    <div class="container-fluid align-items-center ">
+                        <form id="form" method="post" action=""onsubmit="return validate()">
+                            <div class="p-3">
+                                <label for="mname">Medicine Name</label>
+                                <input type="text" id="mname" class="form-control">
+                                <span id="pmname" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="p-3">
+                                <label for="cname">Company Name</label>
+                                <input type="text" id="cname" class="form-control">
+                                <span id="pcname" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="p-3">
+                                <label for="stock">Stock Quantity</label>
+                                <input type="text" id="stock" class="form-control">
+                                <span id="pstock" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="p-3">
+                                <label for="price">Unit Price</label>
+                                <input type="text" id="price" class="form-control" autocomplete="off">
+                                <span id="pprice" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="p-3">
+                                <label for="date">Expiry date</label> <br>
+                                <input type="date" id="date">
+                                <span id="pdate" class="text-danger font-weight-bold"></span>
+                            </div>
+                             <div class="p-3">
+                                 <input  type="submit" class="btn btn-success" onclick="validate()" value="Add">
+                             </div>
+                
+                        </form>
+                    </div>
+                    <script type="text/javascript" src="addmedi.js"></script>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    searchEl = document.getElementById('presc_search')
+    console.log(searchEl)
+    searchEl.onkeyup = function () {
+        alert('hii')
+    }
+</script>
