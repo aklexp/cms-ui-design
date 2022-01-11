@@ -33,7 +33,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                     <div class="d-flex align-items-center">
                         <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                        <h2 class="fs-2 m-0">Medicine Prescription</h2>
+                        <h2 class="fs-2 m-0" id = "mainpart">Medicine Prescription</h2>
                     </div>
                     
     
@@ -63,7 +63,7 @@
                 </nav>
                 
                 <div class="row my-5">
-                    <h3 class="fs-4 mb-3">Prescription Details</h3>
+                    <h3 class="fs-4 mb-3" id = "secondpart">Prescription Details</h3>
                     <div class="col">
                 <table class="table bg-white rounded shadow-sm  table-hover">
                     <thead>
@@ -78,27 +78,38 @@
                         <tr>
                             <th scope="row">1</th>
                             <td><div class="input-group" style="width:120px">
-                                <select class="custom-select" id="inputGroupSelect04">
-                                  <option selected>Choose...</option>
-                                  <option value="1">Dolo</option>
-                                  <option value="2">Paracetamol</option>
-                                  <option value="3">Tylenol</option>
-                                </select>
-                                <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button">Add</button>
-                                </div>
+                                
+                                    <input type="search" class="form-control rounded" id ="presc_search" placeholder="Search..." aria-label="Search"
+                                    aria-describedby="search-addon"/>
+                                <span class="input-group-text border-0" id="search-addon">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                
+                                
                               </div>
                               
                               </td>
                             <td><div class="input-group" style="width:120px">
                                 <select class="custom-select" id="inputGroupSelect04">
                                   <option selected>Choose...</option>
-                                  <option value="1">7</option>
-                                  <option value="2">14</option>
-                                  <option value="3">21</option>
+                                  <option value="1">2</option>
+                                  <option value="2">4</option>
+                                  <option value="3">6</option>
+                                  <option value="3">8</option>
+                                  <option value="3">10</option>
+                                  <option value="3">12</option>
+                                  <option value="3">14</option>
+                                  <option value="3">16</option>
+                                  <option value="3">18</option>
+                                  <option value="3">20</option>
+                                  <option value="3">22</option>
+                                  <option value="3">24</option>
+                                  <option value="3">26</option>
+                                  <option value="3">28</option>
+                                  <option value="3">30</option>
+                                  
                                 </select>
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button">Add</button>
+                                  <button class="btn btn-outline-primary" type="button">Add</button>
                                 </div>
                               </div>
                               
@@ -111,7 +122,7 @@
                                   <option value="3">0-0-1</option>
                                 </select>
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button">Add</button>
+                                  <button class="btn btn-outline-primary" type="button">Add</button>
                                 </div>
                               </div>
                               
@@ -123,7 +134,8 @@
                     <div class="col-md-12">
                        
                     
-                        <button class="btn btn-success" id="btn_billSubmit">Update</button>
+                        <button class="btn btn-outline-primary" type="submit" form="form1" value="Submit">Update</button>
+                        <span><button class="btn btn-outline-primary" type="submit" form="form1" value="Submit">Add</button></span>
                     </div>
                 </div>
             </div>
@@ -140,3 +152,15 @@
     </body>
     
 </html>
+<script>
+    searchEl=document.getElementById('presc_search')
+    console.log(searchEl)
+    searchEl.onkeyup = function(){
+        var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     alert("search medicine name");
+     localStorage.setItem('alerted','yes');
+    }
+       
+    }
+</script>

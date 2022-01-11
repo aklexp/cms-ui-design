@@ -1,106 +1,135 @@
 <html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
-        <link rel="stylesheet" href="styles.css" />
-  
-</style>
-    </head>
-    <body>
-        <div class="d-flex" id="wrapper">
-            <div class="bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                        class="me-2"></i>CMS</div>
-                <div class="list-group list-group-flush my-3">
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i
-                            class="fa fa-home  me-2"></i>HOME</a>
-                </div>
-           </div>
-         <div id="page-content-wrapper">
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                        <h2 class="fs-2 m-0">HOME</h2>
-                    </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user me-2"></i>GANESH A
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="text-center" >
-                    <div class="input-group rounded" style="width: 300px">
-                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                        <i class="fas fa-search"></i>
-                        </span>
-                    </div>
-                    <br/><br/><br/>
-                     <div class="container-fluid">
-                    <h1>Appointments for the Day</h1>
-                   </div><br/><br/><br/><br/>
-           
-                </div>
-       
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col">
-       
-                      <div class="member">
-                          <div class="pic"><img src="patient.jpg" alt="patient"></div>
-                            <div class="member-info">
-                               <h4>Appointment NO:1</h4>
-                                <span>Name</span><br/>
-                                <button type="button" class="btn btn-primary">Select</button>
-                           
-                              </div>
-                         </div>
-                       </div>
-                       <div class="col">
-       
-                          <div class="member">
-                              <div class="pic"><img src="patient.jpg" alt="patient"></div>
-                                  <div class="member-info">
-                                       <h4>Appointment NO:2</h4>
-                                      <span>Name2</span><br/>
-                                      <button type="button" class="btn btn-primary">Select</button>
-                               
-                                    </div>
-                               </div>
-                         </div>
-                           <div class="col">
-       
-                              <div class="member">
-                                  <div class="pic"><img src="patient.jpg" alt="patient"></div>
-                                    <div class="member-info">
-                                       <h4>Appointment NO:3</h4>
-                                        <span>Name3</span><br/>
-                                        <button type="button" class="btn btn-primary">Select</button>
-                                   
-                                    </div>
-                               </div>
-                         </div>
-      
-                 </div>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                    class="me-2"></i>CMS</div>
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                        class="fa fa-home  me-2"></i>HOME</a>
             </div>
-     </div>
-      
-        
-    </body>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Doctor</h2>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>GANESH A
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="text-center">
+                <div class="input-group rounded" style="width: 300px">
+                    <input type="search" class="form-control rounded" id ="presc_search" placeholder="Search..." aria-label="Search"
+                        aria-describedby="search-addon"/>
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+                <br /><br /><br />
+                <div class="container-fluid">
+                    <h1 class="heading">Appointments</h1>
+                </div><br />
+
+            </div>
+
+            <div class="container-fluid">
+
+
+
+                <div class="row">
+
+                    <div class="col">
+
+
+                        <div class="member">
+
+                            <div class="appointmentbar">
+                                <h4>Appointment NO:1</h4>
+                                <span>Rahul</span><br />
+                                <button type="button" class="btn btn-outline-primary btn-sm">Select</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="member">
+
+                            <div class="appointmentbar">
+                                <h4>Appointment NO:2</h4>
+                                <span>Roy</span><br />
+                                <button type="button" class="btn btn-outline-primary btn-sm">Select</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="member">
+
+                            <div class="appointmentbar">
+                                <h4>Appointment NO:3</h4>
+                                <span>Smitha</span><br />
+                                <button type="button" class="btn btn-outline-primary btn-sm">Select</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+
+
+</body>
+
 </html>
+<script>
+    searchEl=document.getElementById('presc_search')
+    console.log(searchEl)
+    searchEl.onkeyup = function(){
+        var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     alert("search medicine name");
+     localStorage.setItem('alerted','yes');
+    }
+       
+    }
+</script>
